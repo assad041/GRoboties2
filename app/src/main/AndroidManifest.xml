@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.asd_soft.assaduzzaman_noor.groboties">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/BlocklyVerticalTheme"
+        android:windowSoftInputMode="stateHidden|adjustPan">
+        <activity
+            android:name=".SimpleActivity"
+            android:label="@string/simple_activity_name"
+            android:taskAffinity="com.google.blockly.SimpleActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LuaActivity"
+            android:label="@string/lua_activity_name"
+            android:taskAffinity="com.google.blockly.LuaActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DevTestsActivity"
+            android:label="@string/dev_activity_name"
+            android:taskAffinity="com.google.blockly.demo.MainActivity"
+            android:theme="@style/StylesDemoTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".SplitActivity"
+            android:label="@string/split_activity_name"
+            android:taskAffinity="com.google.blockly.demo.SplitActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".TurtleActivity"
+            android:label="@string/turtle_activity_name"
+            android:taskAffinity="com.google.blockly.demo.TurtleActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+
+        </activity>
+        <activity
+            android:name=".StylesActivity"
+            android:label="@string/style_activity_name"
+            android:taskAffinity="com.google.blockly.demo.StylesActivity"
+            android:theme="@style/StylesDemoTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".FlyoutDemos"
+            android:label="@string/flyout_activity_name"
+            android:taskAffinity="com.google.blockly.demo.FlyoutDemos"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".flyout.AlwaysOpenToolboxActivity"
+            android:label="@string/always_open_toolbox_activity_name"
+            android:taskAffinity="com.google.blockly.demo.FlyoutDemos"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".flyout.NoCategoriesToolboxActivity"
+            android:label="@string/no_categories_toolbox_activity_name"
+            android:taskAffinity="com.google.blockly.demo.FlyoutDemos"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".BluetoothConnection"
+
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:label="Connect Bluetooth"
+                    />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
