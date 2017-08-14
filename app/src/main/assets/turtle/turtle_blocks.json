@@ -1,18 +1,18 @@
 [
   {
     "type": "turtle_move_internal",
-    "message0": "move %1 %2",
+    "message0": "move %1 time %2 speed %3",
     "args0": [
       {
         "type": "field_dropdown",
         "name": "DIR",
         "options": [
           [
-            "forward by",
+            "forward",
             "F"
           ],
           [
-            "backward by",
+            "backward",
             "B"
           ]
         ]
@@ -36,6 +36,28 @@
           [
             "4",
             "4"
+          ]
+        ]
+      },
+      {
+        "type": "field_dropdown",
+        "name": "SP",
+        "options": [
+          [
+            " 100",
+            " 100"
+          ],
+          [
+            " 150",
+            " 150"
+          ],
+          [
+            " 200",
+            " 200"
+          ],
+          [
+            " 250",
+            " 250"
           ]
         ]
       }

@@ -23,8 +23,9 @@
 Blockly.JavaScript['turtle_move_internal'] = function(block) {
   // Generate JavaScript for moving forward or backwards.
   var value = block.getFieldValue('VALUE');
+  var sp = block.getFieldValue('SP');
   return  block.getFieldValue('DIR') +
-      ' ' + value + ' 200'+'\n';
+      ' ' + value +sp+ '\n';
 };
 
 Blockly.JavaScript['turtle_turn_internal'] = function(block) {
