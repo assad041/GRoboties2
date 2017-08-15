@@ -329,6 +329,7 @@ public class TurtleActivity extends BlocklySectionsActivity {
                     btSocket = dispositivo.createInsecureRfcommSocketToServiceRecord(myUUID);//create a RFCOMM (SPP) connection
                     BluetoothAdapter.getDefaultAdapter().cancelDiscovery();
                     btSocket.connect();//start connection
+
                 }
             }
             catch (IOException e)
