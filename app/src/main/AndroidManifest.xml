@@ -35,18 +35,10 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".TurtleActivity"
-            android:screenOrientation="landscape"
             android:label="@string/app_name"
+            android:screenOrientation="landscape"
             android:taskAffinity="com.google.blockly.demo.TurtleActivity"
-            android:windowSoftInputMode="stateHidden|adjustPan">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"
-                    android:label="G-Robotics"
-                    />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity
             android:name=".StylesActivity"
             android:label="@string/style_activity_name"
@@ -68,12 +60,20 @@
             android:label="@string/no_categories_toolbox_activity_name"
             android:taskAffinity="com.google.blockly.demo.FlyoutDemos"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".BluetoothConnection"
-            android:screenOrientation="landscape"
-            >
+        <activity
+            android:name=".BluetoothConnection"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SplashScreenactivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name=".PlayActivity"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>
