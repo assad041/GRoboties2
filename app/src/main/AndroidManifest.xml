@@ -38,7 +38,13 @@
             android:label="@string/turtle_activity_name"
             android:taskAffinity="com.google.blockly.demo.TurtleActivity"
             android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:label="G-Robotics"
+                    />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".StylesActivity"
@@ -65,13 +71,7 @@
 
             >
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"
-                    android:label="Connect Bluetooth"
-                    />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

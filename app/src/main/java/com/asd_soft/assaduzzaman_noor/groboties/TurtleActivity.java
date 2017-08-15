@@ -143,6 +143,9 @@ public class TurtleActivity extends BlocklySectionsActivity {
         boolean loadWorkspace = false;
         String filename = "";
 
+        if(id==R.id.action_blue){
+            bluetooth();
+        }
 
 
         if (loadWorkspace) {
@@ -226,9 +229,18 @@ public class TurtleActivity extends BlocklySectionsActivity {
         mTurtleWebview.loadUrl("file:///android_asset/turtle/turtle.html");
         Intent newint = getIntent();
         address = newint.getStringExtra(BluetoothConnection.EXTRA_ADDRESS); //receive the address of the bluetooth device
-        new ConnectBT().execute();
+        if(address!=null){
+            new ConnectBT().execute();
+        }
+
         return root;
     }
+
+
+    public static void bluetooth(){
+
+    }
+
 
     @NonNull
     @Override
@@ -289,6 +301,11 @@ public class TurtleActivity extends BlocklySectionsActivity {
 
     }
 
+    public void bluetooth(MenuItem item) {
+        Intent intent = new Intent(TurtleActivity.this,BluetoothConnection.class);
+        startActivity(intent);
+    }
+
 
     private class ConnectBT extends AsyncTask<Void, Void, Void>
     {
@@ -338,5 +355,7 @@ public class TurtleActivity extends BlocklySectionsActivity {
             }
             progress.dismiss();
         }
+
+
     }
 }
