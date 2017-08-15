@@ -1,11 +1,11 @@
 package com.asd_soft.assaduzzaman_noor.groboties;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
+
+import static java.lang.Thread.sleep;
 
 public class SplashScreenactivity extends AppCompatActivity {
 
@@ -16,6 +16,11 @@ public class SplashScreenactivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                try {
+                    sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 Intent intent=new Intent(SplashScreenactivity.this,PlayActivity.class);
                 startActivity(intent);
                 finish();

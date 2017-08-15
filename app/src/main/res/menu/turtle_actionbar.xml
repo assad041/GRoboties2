@@ -7,12 +7,12 @@
     <item android:id="@+id/action_load" android:title="@string/action_load"
           android:orderInCategory="11" app:showAsAction="ifRoom"
           android:icon="@drawable/ic_file_upload_white_24dp"/>
+    <item android:id="@+id/action_run" android:title="@string/action_run"
+        android:orderInCategory="15" app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_play_arrow_white_24dp"/>
     <item android:id="@+id/action_clear" android:title="@string/action_clear"
           android:orderInCategory="12" app:showAsAction="ifRoom"
           android:icon="@drawable/ic_layers_clear_white_24dp"/>
-    <item android:id="@+id/action_run" android:title="@string/action_run"
-          android:orderInCategory="15" app:showAsAction="ifRoom"
-          android:icon="@drawable/ic_play_arrow_white_24dp"/>
     <item android:id="@+id/action_blue" android:onClick="bluetooth" android:title="Bluetooth Setting"
         android:orderInCategory="15" app:showAsAction="ifRoom"
         android:icon="@drawable/ic_play_arrow_white_24dp"/>
