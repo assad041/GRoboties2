@@ -65,20 +65,12 @@ public class TurtleActivity extends BlocklySectionsActivity {
     static final List<String> TURTLE_BLOCK_GENERATORS = Arrays.asList(
             "turtle/generators.js"
     );
-    private static final int MAX_LEVELS = 10;
+    private static final int MAX_LEVELS = 1;
     private static final String[] LEVEL_TOOLBOX = new String[MAX_LEVELS];
 
     static {
         LEVEL_TOOLBOX[0] = "toolbox_basic.xml";
-        LEVEL_TOOLBOX[1] = "toolbox_basic.xml";
-        LEVEL_TOOLBOX[2] = "toolbox_colour.xml";
-        LEVEL_TOOLBOX[3] = "toolbox_colour_pen.xml";
-        LEVEL_TOOLBOX[4] = "toolbox_colour_pen.xml";
-        LEVEL_TOOLBOX[5] = "toolbox_colour_pen.xml";
-        LEVEL_TOOLBOX[6] = "toolbox_colour_pen.xml";
-        LEVEL_TOOLBOX[7] = "toolbox_colour_pen.xml";
-        LEVEL_TOOLBOX[8] = "toolbox_colour_pen.xml";
-        LEVEL_TOOLBOX[9] = "toolbox_advanced.xml";
+
     }
 
     private final Handler mHandler = new Handler();
