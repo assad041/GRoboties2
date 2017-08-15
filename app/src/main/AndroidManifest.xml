@@ -13,6 +13,7 @@
         android:theme="@style/BlocklyVerticalTheme"
         android:windowSoftInputMode="stateHidden|adjustPan">
         <activity
+
             android:name=".SimpleActivity"
             android:label="@string/simple_activity_name"
             android:taskAffinity="com.google.blockly.SimpleActivity"
