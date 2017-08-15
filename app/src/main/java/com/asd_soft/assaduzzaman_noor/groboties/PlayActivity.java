@@ -12,11 +12,12 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class PlayActivity extends AppCompatActivity {
-
+View decorView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_play);
+        decorView=getLayoutInflater().inflate(R.layout.activity_play, null);
+        setContentView(decorView);
 
         final ImageView imageView = (ImageView)findViewById(R.id.imageView);
 
@@ -32,5 +33,18 @@ public class PlayActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            decorView.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        }
     }
 }
