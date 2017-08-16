@@ -11,7 +11,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Handler;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebChromeClient;
@@ -282,7 +281,12 @@ View decorView;
     }
 
 
-
+    public void connect(View view) {
+        if (btSocket!=null)
+            disconnect();
+        Intent intent = new Intent(TurtleActivity.this,BluetoothConnection.class);
+        startActivity(intent);
+    }
 
 
 
@@ -310,6 +314,10 @@ View decorView;
     public void bluetooth(MenuItem item) {
         Intent intent = new Intent(TurtleActivity.this,BluetoothConnection.class);
         startActivity(intent);
+    }
+
+    public void run(View view) {
+        getCodeGenerationCallback();
     }
 
 
