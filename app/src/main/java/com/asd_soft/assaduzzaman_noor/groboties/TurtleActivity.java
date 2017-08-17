@@ -124,10 +124,13 @@ public class TurtleActivity extends BlocklySectionsActivity {
         mBlocklyActivityHelper.saveWorkspaceToAppDirSafely(SAVE_FILENAME);
     }
 
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return onDemoItemSelected(item, this) || super.onOptionsItemSelected(item);
     }
+
 
     static boolean onDemoItemSelected(MenuItem item, AbstractBlocklyActivity activity) {
         BlocklyController controller = activity.getController();
@@ -317,7 +320,7 @@ View decorView;
     }
 
     public void run(View view) {
-        getCodeGenerationCallback();
+
     }
 
 
