@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Content area for TurtleActivity with both Blockly workspace.
   -  and WebView where code can run.
+
+        <Button
+            android:id="@+id/action_run"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="play" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="17dp"
+            android:layout_toStartOf="@+id/action_run"
+            android:onClick="connect"
+            android:text="connection" />
   -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,24 +33,7 @@
         >
         <include layout="@layout/blockly_unified_workspace" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:onClick="run"
-            android:text="play" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="17dp"
-            android:layout_toStartOf="@+id/button2"
-            android:onClick="connect"
-            android:text="connection" />
     </RelativeLayout>
 
     <WebView android:id="@+id/turtle_runtime"
@@ -41,3 +42,5 @@
         android:layout_weight="1"
         />
 </LinearLayout>
+
+

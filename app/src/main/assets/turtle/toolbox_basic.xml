@@ -14,15 +14,13 @@
   -->
 
 <toolbox>
-    <category name="Start" colour="160">
+    <category name="Start" colour="160" >
         <block type="block_start">
 
         </block>
     </category>
     <category name="Drive" colour="160">
-
         <block type="turtle_move_internal">
-
             <field name="DIR">moveForward</field>
             <field name="VALUE">12</field>
             <field name="SP">100</field>

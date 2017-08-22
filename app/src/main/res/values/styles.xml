@@ -18,12 +18,14 @@
     <style name="BlocklyVerticalTheme" parent="BlocklyTheme" >
         <item name="blockTextSize">24sp</item>
         <item name="blockHat">false</item>
+
     </style>
 
 
     <style name="StylesDemoTheme" parent="BlocklyVerticalTheme">
         <item name="blockTextSize">34sp</item>
         <item name="android:textColorPrimary">@color/styleDemoTextPrimary</item>
+
     </style>
 
 </resources>

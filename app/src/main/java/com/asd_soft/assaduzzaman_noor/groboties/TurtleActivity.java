@@ -65,8 +65,8 @@ public class TurtleActivity extends BlocklySectionsActivity {
     static final List<String> TURTLE_BLOCK_GENERATORS = Arrays.asList(
             "turtle/generators.js"
     );
-    private static final int MAX_LEVELS = 1;
-    private static final String[] LEVEL_TOOLBOX = new String[MAX_LEVELS];
+    private static final int MAX_LEVELS = 0;
+    private static final String[] LEVEL_TOOLBOX = new String[1];
 
     static {
         LEVEL_TOOLBOX[0] = "toolbox_basic.xml";
@@ -126,6 +126,10 @@ public class TurtleActivity extends BlocklySectionsActivity {
 
 
 
+
+
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return onDemoItemSelected(item, this) || super.onOptionsItemSelected(item);
@@ -139,8 +143,9 @@ public class TurtleActivity extends BlocklySectionsActivity {
         String filename = "";
 
         if(id==R.id.action_blue){
-            bluetooth();
+
         }
+
 
 
         if (loadWorkspace) {
@@ -183,7 +188,7 @@ public class TurtleActivity extends BlocklySectionsActivity {
     @Override
     protected String getToolboxContentsXmlPath() {
         // Expose a different set of blocks to the user at each level.
-        return "turtle/" + LEVEL_TOOLBOX[getCurrentSectionIndex()];
+        return "turtle/" + LEVEL_TOOLBOX[0];
     }
 
     @Override
@@ -237,16 +242,13 @@ View decorView;
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
             decorView.setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-        }
-    }
-    public static void bluetooth(){
 
+
+                             View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            );
+        }
     }
 
 
@@ -319,7 +321,8 @@ View decorView;
         startActivity(intent);
     }
 
-    public void run(View view) {
+    public void runableC(View view) {
+
 
     }
 
