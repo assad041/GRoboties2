@@ -40,6 +40,7 @@ Blockly.JavaScript['turtle_colour_internal'] = function(block) {
   var colour = block.getFieldValue('COLOUR');
   return 'Turtle.penColour(\'' + colour + '\', \'block_id_' +
       block.id + '\');\n';
+
 };
 
 Blockly.JavaScript['turtle_pen'] = function(block) {
@@ -49,6 +50,7 @@ Blockly.JavaScript['turtle_pen'] = function(block) {
 
 Blockly.JavaScript['turtle_width'] = function(block) {
   // Generate JavaScript for setting the width.
+
   var width = Blockly.JavaScript.valueToCode(block, 'WIDTH',
       Blockly.JavaScript.ORDER_NONE) || '1';
   return 'Turtle.penWidth(' + width + ', \'block_id_' + block.id + '\');\n';
@@ -107,7 +109,7 @@ Blockly.JavaScript['turtle_colour'] = function(block) {
       block.id + '\');\n';
 };
 
-Blockly.JavaScript['turtle_repeat_internal'] = Blockly.JavaScript['controls_repeat'];
+Blockly.JavaScript['turtle_repeat_internal'] =Blockly.JavaScript['controls_repeat'];
 
 
 /**

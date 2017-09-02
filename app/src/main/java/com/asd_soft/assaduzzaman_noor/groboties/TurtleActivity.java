@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -35,6 +34,7 @@ import java.util.UUID;
 /**
  * Demo app with the Blockly Games turtle game in a webview.
  */
+
 public class TurtleActivity extends BlocklySectionsActivity {
     private static final String TAG = "TurtleActivity";
 
@@ -50,9 +50,6 @@ public class TurtleActivity extends BlocklySectionsActivity {
     String address = null;
     private ProgressDialog progress;
 
-
-    Context context;
-
     static final List<String> TURTLE_BLOCK_DEFINITIONS = Arrays.asList(
             DefaultBlocks.COLOR_BLOCKS_PATH,
             DefaultBlocks.LOGIC_BLOCKS_PATH,
@@ -62,9 +59,11 @@ public class TurtleActivity extends BlocklySectionsActivity {
             DefaultBlocks.VARIABLE_BLOCKS_PATH,
             "turtle/turtle_blocks.json"
     );
+
     static final List<String> TURTLE_BLOCK_GENERATORS = Arrays.asList(
             "turtle/generators.js"
     );
+
     private static final int MAX_LEVELS = 0;
     private static final String[] LEVEL_TOOLBOX = new String[1];
 
@@ -80,14 +79,37 @@ public class TurtleActivity extends BlocklySectionsActivity {
 
                 @Override
                 public void onFinishCodeGeneration(final String generatedCode) {
+
                     // Sample callback.
                     //Log.i(TAG, "generatedCode:\n" + generatedCode);
 
-                    String data=generatedCode+'\n';
+                    String chk= generatedCode.substring(0,3);
+                    String data="";
+                    if(chk.equals("for")){
+                        String nb=generatedCode.substring(28,29);
+                        int mx=Integer.valueOf(nb);
+                        data=generatedCode.substring(generatedCode.indexOf('{')+1,generatedCode.indexOf('}')-1);
+                        String end=generatedCode.substring(generatedCode.indexOf('}')+1);
+                        data=data.replace('\n'+"  ",'\n'+"");
+                        data=data.substring(1);
+                        String data1="";
+                        for (int i=0; i<mx; i++){
+                            if(i!=mx-1)
+                                data1+=data+'\n';
+                            else
+                                data1+=data;
+
+                        }
+                        data=data1+end;
+                        Toast.makeText(getApplicationContext(), data,
+                                Toast.LENGTH_LONG).show();
+
+
+                    }else
+                         data=generatedCode+'\n';
 
                     if (btSocket!=null)
                     {
-
                         try
                         {
                             btSocket.getOutputStream().write(data.getBytes());
@@ -109,7 +131,6 @@ public class TurtleActivity extends BlocklySectionsActivity {
                             mTurtleWebview.loadUrl("javascript:" + encoded);
                         }
                     });*/
-
 
                 }
             };
@@ -145,7 +166,6 @@ public class TurtleActivity extends BlocklySectionsActivity {
         if(id==R.id.action_blue){
 
         }
-
 
 
         if (loadWorkspace) {
