@@ -28,6 +28,10 @@ Blockly.JavaScript['turtle_move_internal'] = function(block) {
       ' ' + value +sp+ '\n';
 };
 
+Blockly.JavaScript['block_start'] = function(block) {
+  return  '';
+};
+
 Blockly.JavaScript['turtle_turn_internal'] = function(block) {
   // Generate JavaScript for turning left or right.
   var value = block.getFieldValue('VALUE');
